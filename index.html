@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic IDs Example</title>
+    <title>Sample Form Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,60 +22,17 @@
 </head>
 <body>
 
-<h2>User Details (Dynamic)</h2>
+    <h2>User Details</h2>
 
-<div id="formContainer"></div>
+    <!-- Textboxes -->
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
 
-<script>
-    // Utility function to generate dynamic ID
-    function generateId(prefix) {
-        return prefix + "_" + Math.floor(Math.random() * 100000);
-    }
-
-    const container = document.getElementById("formContainer");
-
-    // Create Username field
-    const usernameInput = document.createElement("input");
-    usernameInput.type = "text";
-    usernameInput.id = generateId("username");
-    usernameInput.placeholder = "Enter Username";
-    container.appendChild(usernameInput);
-
-    // Create Email field
-    const emailInput = document.createElement("input");
-    emailInput.type = "email";
-    emailInput.id = generateId("email");
-    emailInput.placeholder = "Enter Email";
-    container.appendChild(emailInput);
-
-    // Create Password field
-    const passwordInput = document.createElement("input");
-    passwordInput.type = "password";
-    passwordInput.id = generateId("password");
-    passwordInput.placeholder = "Enter Password";
-    container.appendChild(passwordInput);
-
-    // Create Login button
-    const loginBtn = document.createElement("button");
-    loginBtn.id = generateId("loginBtn");
-    loginBtn.innerText = "Login";
-    container.appendChild(loginBtn);
-
-    // Create Reset button
-    const resetBtn = document.createElement("button");
-    resetBtn.id = generateId("resetBtn");
-    resetBtn.innerText = "Reset";
-    container.appendChild(resetBtn);
-
-    // Just to see generated IDs
-    console.log(
-        usernameInput.id,
-        emailInput.id,
-        passwordInput.id,
-        loginBtn.id,
-        resetBtn.id
-    );
-</script>
+    <!-- Buttons -->
+    <button id="loginBtn">Login</button>
+    <button id="resetBtn">Reset</button>
 
 </body>
 </html>
+
